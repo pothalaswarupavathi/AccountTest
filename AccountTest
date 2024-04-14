@@ -1,0 +1,144 @@
+import java.util.Scanner;
+
+class Customer1 {
+	private int custId;
+	private String custName;
+	private String custAddress;
+
+	public Customer1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Customer1(int custId, String custName, String custAddress) {
+		super();
+		this.custId = custId;
+		this.custName = custName;
+		this.custAddress = custAddress;
+	}
+
+	public int getCustId() {
+		return custId;
+	}
+
+	public void setCustId(int custId) {
+		this.custId = custId;
+	}
+
+	public String getCustName() {
+		return custName;
+	}
+
+	public void setCustName(String custName) {
+		this.custName = custName;
+	}
+
+	public String getCustAddress() {
+		return custAddress;
+	}
+
+	public void setCustAddress(String custAddress) {
+		this.custAddress = custAddress;
+	}
+
+	public void display() {
+		System.out.println(custId);
+		System.out.println(custName);
+		System.out.println(custAddress);
+
+	}
+
+}
+
+class Account1 {
+	private int accId;
+	private String accType;
+	private String customer;
+	private float accBalance;
+
+	public Account1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Account1(int accId, String accType, String customer, float accBalance) {
+		super();
+		this.accId = accId;
+		this.accType = accType;
+		this.customer = customer;
+		this.accBalance = accBalance;
+	}
+
+	public void display() {
+		System.out.println(accId);
+		System.out.println(accType);
+		System.out.println(customer);
+		System.out.println(accBalance);
+
+	}
+
+	public int getAccId() {
+		return accId;
+	}
+
+	public void setAccId(int accId) {
+		this.accId = accId;
+	}
+
+	public String getAccType() {
+		return accType;
+	}
+
+	public void setAccType(String accType) {
+		this.accType = accType;
+	}
+
+	public String getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(String customer) {
+		this.customer = customer;
+	}
+
+	public float getAccBalance() {
+		return accBalance;
+	}
+
+	public void setAccBalance(float accBalance) {
+		this.accBalance = accBalance;
+	}
+
+}
+
+public class AccountTest {
+	public static void main(String args[]) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter customer id");
+		int custId = in.nextInt();
+		System.out.println("Enter customer name");
+		String custName = in.next();
+		System.out.println("Enter customer address");
+		String custAddress = in.next();
+
+		Customer1 c = new Customer1(custId, custName, custAddress);
+
+		c.display();
+
+		System.out.println("Enter account id");
+		int accId = in.nextInt();
+		System.out.println("Enter account type");
+		String accType = in.next();
+		System.out.println("Enter customer");
+		String customer = in.next();
+		System.out.println("Enter balance");
+		float accBalance = in.nextFloat();
+
+		Account1 a = new Account1(accId, accType, customer, accBalance);
+		a.setCustomer(customer);
+		a.setAccBalance(accBalance);
+
+		a.display();
+
+	}
+
+}
+
